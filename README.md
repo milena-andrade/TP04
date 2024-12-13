@@ -1,1 +1,16 @@
 # TP04
+MILENA COSTA DE ANDRADE - CB3027171
+
+TABELAS DO BANCO
+CREATE TABLE tbcargos (
+  cd_cargo SMALLINT UNSIGNED PRIMARY KEY,
+  ds_cargo VARCHAR(20)
+);
+
+CREATE TABLE tbfuncs (
+  cod_func INT UNSIGNED PRIMARY KEY,
+  nome_func VARCHAR(30) NULL,
+  sal_func DECIMAL(8,2) NULL,
+  cod_cargo SMALLINT UNSIGNED NULL,
+  FOREIGN KEY (cod_cargo) REFERENCES tbcargos(cd_cargo)
+);
